@@ -16,7 +16,7 @@ var hostname = location.hostname;
 //alert(hostname);
 
 //var srvURL = "http://www.bluapps.in/api_dvj/Serv";
-var srvURL = "http://www.dvj-design.com/api_dvj/Serv";
+var srvURL = "http://www.ivii.in/api_app_ivii/Serv";
 if(hostname == 'localhost')
 {
     var srvURL = "http://localhost/api_app_ivii/Serv";
