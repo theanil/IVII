@@ -208,8 +208,8 @@
     <splash src="icon/1080w1920h.png"      gap:platform="ios"     width="1080" height="1920" />
     <splash src="icon/1536w2048h.png"      gap:platform="ios"     width="1536" height="2048" />
     -->
-    
-	<splash src="images/splash.png" />
+
+	<splash src="splash.png" />
     <!--
         Define access to external domains.
 
