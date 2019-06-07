@@ -189,6 +189,7 @@
 
 
     <!-- Define app splash screen for each platform. -->
+    <!--
     <splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-ldpi" />
     <splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-hdpi" />
@@ -206,7 +207,8 @@
     <splash src="icon/2208w1242h.png"      gap:platform="ios"     width="2208" height="1242" />
     <splash src="icon/1080w1920h.png"      gap:platform="ios"     width="1080" height="1920" />
     <splash src="icon/1536w2048h.png"      gap:platform="ios"     width="1536" height="2048" />
-
+    -->
+    
 	<splash src="images/splash.png" />
     <!--
         Define access to external domains.
