@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>My App</title>
+<link rel="stylesheet" href="css/framework7.ios.min.css">
+<link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+ 
+    
+	<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+    <link href="css/stylesheets/template.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="css/my.css" media="screen, projection" rel="stylesheet" type="text/css" />
+   
+</head>
+<body>
+  <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <nav id="menu" class="left show">
+	           <ul>
+	            <li><a href="index.html"  class="close-panel"><i class="fa fa-home"></i>Home</a></li>
+	            <li><a href="aboutus.html"  class="close-panel"><i class="fa fa-star"></i>About Us</a></li>	           
+	            <li><a href="products.html"  class="close-panel"><i class="fa fa-file-o"></i>Products</a></li>
+	            <li><a href="brochure.html"  class="close-panel"><i class="fa fa-file-text-o"></i>Brochure</a></li>
+                <li><a href="#" onclick="ContactPage();" class="close-panel"><i class="fa fa-envelope"></i>Contact</a></li>
+                <li><a href="#" onclick="Notification();" class="close-panel"><i class="fa fa-envelope"></i>Notification</a></li>
+
+                <div id="beforelogin" style="display:none; padding-left: 4px;">
+                <li><a href="dealer.html"  class="close-panel"><i class="fa fa-envelope"></i>Register as Dealer</a></li>
+                <!-- <li><a href="login.html"  class="close-panel"><i class="fa fa-envelope"></i>Login</a></li> -->
+                </div>
+
+               <!--  <div id="afterlogin" style="display:none; padding-left: 4px;">
+               
+                <li><a href="#" onclick="Logout();"  class="close-panel"><i class="fa fa-envelope"></i>Log Out</a></li>
+                </div> -->
+                
+	          </ul>
+        </nav>
+    </div>
+		<div class="views">
+			<div class="view view-main">
+			
+
+				<div class="navbar">
+						<div class="navbar-inner bg-black">
+						<div class="left"> 
+								 <a href="#" class="link icon-only open-panel" >
+		                            <i class="fa fa-bars color-white"></i>
+		                        </a>
+						 </div>
+						<div class="center" style="vertical-align:middle;"><a href="index.html" style="padding-top: 20px;" ><img class="icon" alt="icon" src="icon/logo.png" /> </a></div>
+						<div class="right"> 
+							
+		                     <a href="search.html"  class="link icon-only" >
+		                            <i class="fa fa-search color-white"></i>
+		                     </a>
+						</div>
+						</div>
+				</div>
+
+				<div class="pages navbar-through">
+
+
+					<div data-page="index" class="page"> 
+						
+
+
+						<div class="page-content">
+						
+					
+
+							<div class="content-block" style="padding: 0px;margin:0px;">
+
+								<br>
+								<div class="row">
+								   
+
+								    <div class="col-50" style="background: transparent;"><a href="bathware.html"><img src="images/bathware.jpg"></a></div>
+
+								    
+
+								     <div class="col-50" style="background: transparent;"><a href="allied_products.html"><img src="images/allied.jpg"></a></div>
+
+								     <div class="col-50" style="background: transparent;"><a href="faucets.html"><img src="images/faucets.jpg"></a></div>
+
+								     <div class="col-50" style="background: transparent;"><a href="shower_systems.html"><img src="images/showerSystem.jpg"></a></div>
+
+								     <div class="col-50" style="background: transparent;"><a href="designer_washbasin.html"><img src="images/designer_wash_basin.jpg"></a></div>
+								     <div class="col-50" style="background: transparent;"><a href="brochure.html"><img src="images/brochure.jpg"></a></div>
+								</div>
+
+								<!-- <div class="row">
+									<div class="col-50" style="background: transparent;"><a href="group.html">group</a></div>
+
+									<div class="col-50" style="background: transparent;"><a href="group_new.html">Add group</a></div>
+									<div class="col-50" style="background: transparent;"><a href="attendance.html">Attendance</a></div>
+								</div> -->
+							  
+	 							
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+ <script type="text/javascript" src="js/framework7.min.js"></script>
+ <script type="text/javascript" src="js/my-app.js"></script>
+ <!--  <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> -->
+
+</body>
+</html>

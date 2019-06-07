@@ -1,0 +1,76 @@
+--Logo center , mail icon
+
+Home Page
+  white background - text
+
+--Product page 
+  single listing
+
+
+
+--skip enquiry form for dealer
+--enquiry in mail
+
+product_price -> field varchar(200)
+
+drop down - shopping centre
+
+Notification 
+   text
+  product updates (field )
+
+open product after clicking notification
+
+notification stored
+
+
+Server key
+AAAAuZPzRcQ:APA91bHBm6O3cDHBtks6f2ZbJxQTdsCoUDKipx88oYDpNu6gHB9lxBzUM8qYW9H-l-795lQ6NWhcMWwItPOLpIgkK4QzgpsIJJ1A_l8a4AVeeIxi1wLCpWr0sV-Ih7vEA0IRB6MeEKap 
+Legacy server key help_outline
+AIzaSyB1KQiu_Hwuy8gd84E_PtbjEkUYE697WaQ 
+Sender ID help_outline
+797051143620 
+
+--
+otp - vaccifire
+
+Select Drop Down -> contact name of lead (multiple)
+
+INSERT INTO `booking_data` (`loc_id`, `club_service_id`, `date_b`, `slot_id`, `slot_from`, `slot_to`, `book_status`, `court_ids`, `mem_charge`, `gue_charge`, `mu_id`, `member_id`, `last_updated`)
+VALUES ('4', '86', '2017-05-06', '1217', '12:15', '13:00', 1, '32', '200', '200', '', '', now());
+
+INSERT INTO `booking_data` (`loc_id`, `club_service_id`, `date_b`, `slot_id`, `slot_from`, `slot_to`, `book_status`, `court_ids`, `mem_charge`, `gue_charge`, `mu_id`, `member_id`, `last_updated`)
+VALUES ('4', '86', '2017-05-06', '1215', '13:30', '12:15', 1, '32', '200', '200', '', '', now());
+
+INSERT INTO `booking_data` (`loc_id`, `club_service_id`, `date_b`, `slot_id`, `slot_from`, `slot_to`, `book_status`, `court_ids`, `mem_charge`, `gue_charge`, `mu_id`, `member_id`, `last_updated`)
+VALUES ('4', '86', '2017-05-06', '1216', '10:45', '11:30', 1, '32', '200', '200', '', '', now());
+
+how many qr code has to be scanned -> tblqrproduct, bldg name which need to be fetched
+which users assigned which client
+
+essel world
+how to deal with addons
+
+visit date + 30 days allowed
+scan -> replace search world "Redeem"
+
+open transaction of as of 24th 
++ booking on 25th May
+in search detail Destination missing
+
+Redeem button 
+
+user list
+
+---
+app vaccifire
+
+QR code search (http://www.vaccifire.com/crm/admin/qr_code_generate)
+show Count on Main screen
+client name bigger
+
+Quotation
+sr no in reports
+
+
+
