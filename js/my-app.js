@@ -16,14 +16,14 @@ var hostname = location.hostname;
 //alert(hostname);
 
 //var srvURL = "http://www.bluapps.in/api_dvj/Serv";
-var srvURL = "http://www.ivii.in/api_app_ivii/Serv";
+var srvURL = "http://www.ivii.in/api_ivii/Serv";
 if(hostname == 'localhost')
 {
     var srvURL = "http://localhost/api_app_ivii/Serv";
 }
-var version = "118";
-var app_name ="DVJ";
-var appname = "DVJ Design";
+var version = "100";
+var app_name ="IVII";
+var appname = "IVII";
 
 $$(document).on('ajaxStart', function (e) { myApp.showIndicator(); }); 
 $$(document).on('ajaxComplete', function () { myApp.hideIndicator(); });
@@ -3451,7 +3451,7 @@ myApp.onPageInit('aboutus', function (page) {
  /*=== Default standalone ===*/
     var myPhotoBrowserPopup = myApp.photoBrowser({
         photos : [
-            'http://www.dvj-design.com/img/brochure/8fecc19db32c9dc9b19b430c3a305ce9.jpg'
+            'http://www.ivii.in/img/brochure/8fecc19db32c9dc9b19b430c3a305ce9.jpg'
         ],
         type: 'page', 
         zoom: true,
@@ -3583,7 +3583,7 @@ function sendID(id, platform)
         //return false;
     }
 
-    url = "http://www.dvj-design.com/api_dvj/send.php";
+    url = "http://www.ivii.in/api_dvj/send.php";
 
     $$.ajax({
             url: url,
