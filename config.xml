@@ -209,11 +209,11 @@
     <splash src="icon/1536w2048h.png"      gap:platform="ios"     width="1536" height="2048" />
     -->
 
-    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-ldpi" />
-    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-mdpi" />
-    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-xhdpi" />
-    <splash src="images/800_480.png" />
+    <gap:splash src="screen.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="screen.png"       gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="screen.png"       gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="screen.png"       gap:platform="android" gap:qualifier="port-xhdpi" />
+    <splash src="screen.png" />
 
 
     <!--
