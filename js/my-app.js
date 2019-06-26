@@ -1712,6 +1712,8 @@ if(id)
 
                         }else
                         {
+                            //cadd += '               <a href="#" onclick="downbrochure(' + "'" + urldecode(e.data.brochure[i].brochure_pdf) + "');" + '">';
+
                           
                             if(fact_sheet != '')
                             {
