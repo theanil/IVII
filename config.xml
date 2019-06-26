@@ -77,8 +77,7 @@
     <gap:plugin name="cordova-plugin-media" source="npm" />
         <gap:plugin name="cordova-plugin-file" source="npm" />
 
-    <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
-    <!---->
+    <plugin name="cordova-plugin-file-transfer" source="npm" />
 
     <feature name="http://api.phonegap.com/1.0/network"/>
 
