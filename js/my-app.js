@@ -2347,7 +2347,12 @@ function downbrochure(URL)
       alert(URL)
       //downloader.init({folder: "ivii", unzip: true});
       //downloader.get(URL);
-      window.open( URL, '_system');
+      //window.open( URL, '_system');
+
+      var inAppBrowserRef;
+      var target = "_system";
+      var options = "location=yes,hidden=no,enableViewportScale=yes,toolbar=no,hardwareback=yes";
+      inAppBrowserRef = cordova.InAppBrowser.open(URL, target, options); 
 }
 
 function downbrochure11(URL)
