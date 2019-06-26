@@ -1704,7 +1704,7 @@ if(id)
                            
                             if(fact_sheet != '')
                             {
-                                cadd += '<span"> <a href="#" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span>';
+                                cadd += '<span"> <a href="' + fact_sheet + '" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span>';
                             }
                            cadd += '<span style="display: block; color: black;" id="pd_' + product_id +'">' + price + ' <a href="#" class="link button button-small button-fill color-red" style="width: 100px;" onclick="RemoveProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span>';
                            cadd += '<span style="display: none; color: black;" id="pa_' + product_id +'">' + price + ' <a href="#" class="link" style="" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price + "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span>';
@@ -1717,7 +1717,7 @@ if(id)
                           
                             if(fact_sheet != '')
                             {
-                                cadd += '<center><span> <a href="#" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span></center>';
+                                cadd += '<center><span> <a href="' + fact_sheet + '" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span></center>';
                             }                          
                             //cadd += '<center>';
                             cadd += '<center><span style="display: none; color: black;" id="pd_' + product_id +'">' + price + '<a href="#" class="link button button-small button-fill color-red" onclick="RemoveProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '>Remove</a></span></center>';
