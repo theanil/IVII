@@ -2342,11 +2342,11 @@ myApp.onPageInit('brochure', function (page) {
       });
 });
 
-function downbrochure(url) 
+function downbrochure(URL) 
 {
     alert(URL)
-    window.open(url, '_system');
-    myApp.hidePreloader();
+    window.open(URL, '_system');
+    //myApp.hidePreloader();
 
 }
 
