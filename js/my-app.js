@@ -2342,9 +2342,18 @@ myApp.onPageInit('brochure', function (page) {
       });
 });
 
-function downbrochure(URL)
+function downbrochure(url) 
 {
-      alert(URL)
+    alert(URL)
+    window.open(url, '_system');
+    myApp.hidePreloader();
+
+}
+
+
+function downbrochure111(URL)
+{
+      //alert(URL)
       //downloader.init({folder: "ivii", unzip: true});
       //downloader.get(URL);
       //window.open( URL, '_system');
@@ -2354,29 +2363,10 @@ function downbrochure(URL)
       //var options = "location=yes,hidden=no,enableViewportScale=yes,toolbar=no,hardwareback=yes";
       //inAppBrowserRef = cordova.InAppBrowser.open(URL, target, options); 
 
-    var fileTransfer = new FileTransfer();
-    var uri = encodeURI(URL);
-     
-    fileTransfer.download(
-        uri,
-        fileURL,
-        function(entry) {
-            alert("download complete: " + entry.toURL());
-        },
-        function(error) {
-            alert("download error source " + error.source);
-            alert("download error target " + error.target);
-            alert("download error code" + error.code);
-        },
-        false,
-        {
-            headers: {
-                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-            }
-        }
-    );
 
 }
+
+
 
 function downbrochure11(URL)
 {

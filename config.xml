@@ -48,46 +48,49 @@
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
  
     
-    <!--
-    <plugin name="com.kumbe.phonegap.zoom.zoomcontrol" spec="0.1.8" source="pgb" />
-    <plugin name="com.teamnemitoff.phonedialer" spec="0.3.0" source="pgb" />
-    -->
-
-    <!-- Core plugins -->
-    <!--gap:plugin name="cordova-plugin-media-capture" source="npm" /-->
-
     <plugin name="cordova-plugin-console" source="npm" />
     <plugin name="cordova-plugin-device" source="npm" />
     <plugin name="cordova-plugin-dialogs" source="npm" />
 
-    <!--
-    <gap:plugin name="cordova-plugin-device-motion" source="npm" />
-    <gap:plugin name="cordova-plugin-device-orientation" source="npm" />
-
-    <gap:plugin name="cordova-plugin-camera" source="npm" />
-    <gap:plugin name="cordova-plugin-battery-status" source="npm" />
-    <gap:plugin name="cordova-plugin-geolocation" source="npm" />
-    <gap:plugin name="cordova-plugin-contacts" source="npm" />
-
-    <gap:plugin name="cordova-plugin-themeablebrowser" source="npm" />
-
-    <gap:plugin name="cordova-plugin-fastrde-downloader" source="npm" />
-
-    -->
-    <gap:plugin name="cordova-plugin-media" source="npm" />
-        <gap:plugin name="cordova-plugin-file" source="npm" />
-
-    <plugin name="cordova-plugin-file-transfer" source="npm" />
-
-    <feature name="http://api.phonegap.com/1.0/network"/>
-
-    <plugin name="cordova-plugin-globalization" source="npm" />
-    <plugin name="cordova-plugin-network-information" source="npm" />
-    <plugin name="cordova-plugin-splashscreen" source="npm" />
-    <plugin name="cordova-plugin-vibration" source="npm" />
+    <plugin name="cordova-plugin-globalization" spec="1.0.8"  source="npm" />
+    <!--<gap:plugin name="cordova-plugin-inappbrowser" source="npm" />-->
     <plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <plugin name="cordova-plugin-browsertab-themeable" source="npm" />
 
-    <plugin name="cordova-plugin-whitelist" source="npm" />
+    <plugin name="com.darktalker.cordova.screenshot" spec="https://github.com/gitawego/cordova-screenshot.git" />
+
+    <plugin name="cordova-plugin-splashscreen" spec="4.1.0" source="npm" />
+    <plugin name="cordova-plugin-camera" spec="2.4.1" />
+    <plugin name="cordova-plugin-geolocation" source="npm" />
+    <plugin name="cordova-plugin-whitelist" spec="1.3.3" source="npm" />
+    <plugin name="cordova-plugin-barcodescanner" source="npm" spec="0.7.0" />
+    <plugin name="cordova-plugin-network-information" spec="1.3.4" source="npm" />
+    <plugin name="cordova-plugin-vibration" spec="2.1.6" source="npm" />
+    <plugin name="cordova.plugins.diagnostic" source="npm" spec="~3.7.1" />
+
+    <plugin name="phonegap-plugin-push" spec="2.1.0" />
+
+    <!--
+    <platform name="android">
+          <resource-file src="google-services.json" target="google-services.json" />
+    </platform>
+-->
+
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+
+    <plugin name="cordova-plugin-themeablebrowser" source="npm" />
+    <plugin name="cordova-plugin-android-permissions" source="npm" />
+
+    <feature name="ThemeableBrowser"> 
+        <!--<param name="android-package" value="com.initialxy.cordova.themeablebrowser.ThemeableBrowser" /> -->
+        <param name="ios-package" value="CDVThemeableBrowser" /> 
+    </feature>   
+    <preference name="CrosswalkAnimatable" value="true" />
+    
+    <plugin name="cordova-plugin-file"   source="npm" />
+    
 
 <!--
     <plugin name="cordova-plugin-media-capture" source="npm" spec="*">
