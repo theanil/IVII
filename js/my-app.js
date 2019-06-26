@@ -30,6 +30,12 @@ $$(document).on('ajaxComplete', function () { myApp.hideIndicator(); });
 
 var intervalId = null;
 
+var options = {};
+//var toast = myApp.toast('A long long message', '', options);
+//toast.show();
+
+//toast.show("message");
+
 document.addEventListener("deviceready", onDeviceReady, false);
  //alert('ok');
  //$.mobile.fixedToolbars.show(true);
@@ -1707,7 +1713,7 @@ if(id)
                             {
                                 cadd += '<span"> <a href="#" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span>';
                             }
-                           cadd += '<span style="display: block; color: black;" id="pd_' + product_id +'">' + price + ' <a href="#"  class="link button button-small button-fill color-red" style="width: 100px;" onclick="RemoveProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove2</a></span>';
+                           cadd += '<span style="display: block; color: black;" id="pd_' + product_id +'">' + price + ' <a href="#"  class="link button button-small button-fill color-red" style="width: 100px;" onclick="RemoveProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span>';
 
                            
                            cadd += '<span style="display: none; color: black;" id="pa_' + product_id +'">' + price + ' <a href="#" class="link" style="" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price + "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span>';
@@ -2077,7 +2083,9 @@ function AddProduct(id,product_name, product_price, product_image)
                    localStorage.setItem("local_products", t3);
                    //t4 = JSON.parse(t3);
                    //myApp.alert('product_name2 ' + t4[0].product_name)
-                   myApp.alert('Product ' + product_name + ' added','')
+                   //myApp.alert('Product ' + product_name + ' added','')
+                   var toast = myApp.toast('Product ' + product_name + ' added', '', options);
+                   toast.show("message");
                    mlen = parseInt(mlen) + 1;
               }
             }else{
@@ -2092,7 +2100,10 @@ function AddProduct(id,product_name, product_price, product_image)
                    localStorage.setItem("local_products", t3);
                    //t4 = JSON.parse(t3);
                    //myApp.alert('product_name2 ' + t4[0].product_name)
-                   myApp.alert('Product ' + product_name + ' added','')
+                   //myApp.alert('Product ' + product_name + ' added','')
+                    var toast = myApp.toast('Product ' + product_name + ' added', '', options);
+                    toast.show("message");
+
                    mlen = parseInt(mlen) + 1;
               }
             }
@@ -2109,7 +2120,10 @@ function AddProduct(id,product_name, product_price, product_image)
                    localStorage.setItem("local_products", t3);
                    //t4 = JSON.parse(t3);
                    //myApp.alert('product_name2 ' + t4[0].product_name)
-                   myApp.alert('Product ' + product_name + ' added','')
+                   //myApp.alert('Product ' + product_name + ' added','')
+                  var toast = myApp.toast('Product ' + product_name + ' added', '', options);
+                  toast.show("message");
+
                    mlen =  1;
       }
     }
@@ -2223,7 +2237,10 @@ function RemoveProduct(id,product_name, product_price)
               localStorage.setItem("local_products", t5);
               //t4 = JSON.parse(t3);
               //myApp.alert('product_name2 ' + t4[0].product_name)
-              myApp.alert('Product ' + product_name + ' removed','')
+              //myApp.alert('Product ' + product_name + ' removed','')
+              var toast = myApp.toast('Product ' + product_name + ' removed', '', options);
+              toast.show("message");
+              
               mlen = parseInt(mlen) - 1;
           }
       //}
