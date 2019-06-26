@@ -2347,7 +2347,7 @@ function downbrochure(URL)
       alert(URL)
       //downloader.init({folder: "ivii", unzip: true});
       //downloader.get(URL);
-      window.open( URL, '_blank');
+      window.open( URL, '_system');
 }
 
 function downbrochure11(URL)
