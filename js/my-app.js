@@ -1699,6 +1699,7 @@ if(id)
                               //myApp.alert('qty: ' + qty, '');
                             
                             //myApp.alert('test','')
+                            cadd += '<div class="row">';
                             cadd += '<center>';
 
                            
@@ -1706,15 +1707,17 @@ if(id)
                             {
                                 cadd += '<span"> <a href="#" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span>';
                             }
-                           cadd += '<span style="display: block; color: black;" id="pd_' + product_id +'">' + price + ' <a href="#" class="link button button-small button-fill color-red" style="width: 100px;" onclick="RemoveProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span>';
+                           cadd += '<span style="display: block; color: black;" id="pd_' + product_id +'">' + price + ' <a href="#"  class="link button button-small button-fill color-red" style="width: 100px;" onclick="RemoveProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove2</a></span>';
+
+                           
                            cadd += '<span style="display: none; color: black;" id="pa_' + product_id +'">' + price + ' <a href="#" class="link" style="" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price + "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span>';
                            cadd += '<center>';
-
+                           cadd += '</div>';
                         }else
                         {
                             //cadd += '               <a href="#" onclick="downbrochure(' + "'" + urldecode(e.data.brochure[i].brochure_pdf) + "');" + '">';
 
-                          
+                            cadd += '<div class="row">';
                             if(fact_sheet != '')
                             {
                                 cadd += '<center><span> <a href="#" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span></center>';
@@ -1723,6 +1726,7 @@ if(id)
                             cadd += '<center><span style="display: none; color: black;" id="pd_' + product_id +'">' + price + '<a href="#" class="link button button-small button-fill color-red" onclick="RemoveProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '>Remove</a></span></center>';
                             cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="" href="#" class="link" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price +  "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span></center>';
                            //cadd += '<center>';
+                           cadd += '</div>';
                         }
 
                         
@@ -2885,6 +2889,7 @@ myApp.onPageInit('search', function (page) {
                           bigproduct_image = urldecode(e.data.products[i].bigproduct_image);
                           product_name = urldecode(e.data.products[i].product_name);
                           product_price = urldecode(e.data.products[i].product_price);
+                          fact_sheet = urldecode(e.data.products[i].fact_sheet);
                           //brochure_fname = urldecode(e.data.products[i].brochure_fname);
                          
                           var b= i%1;
@@ -2941,15 +2946,22 @@ myApp.onPageInit('search', function (page) {
                             cadd += '<center><span style="display: none; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Add</a></span></center>';
                             */
 
+                            cadd += '<div class="row">';
+
                             cadd += '<center>';
 
                             //cadd += '<span id="lblqty_' + product_id + '" style=" display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;"><a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="Pchange(' + "'" + product_id + "');" + '">Update</a></span>';
 
                             //cadd += '<span id="txtqty_' + product_id + '" style="display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;">&nbsp;&nbsp;Qty <input maxlength="4" type="number" style="width:29px; padding-right: 20px !important; text-align: left;" value="' + qty +'" id="qty_' + product_id + '"></span>&nbsp;&nbsp;';
                             
+                            if(fact_sheet != '')
+                            {
+                                cadd += '<span"> <a href="#" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span>';
+                            }
                             cadd += '<span style="display: inline-block; color: black;" id="pd_' + product_id +'"> <a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="RemoveProductNew(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span></center>' + "\n\n";
 
-                            cadd += '<center><span style="display: none; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price +  "','" + product_image  + "');" + '">Add</a></span></center>';
+                            cadd += '<center><span style="display: none; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link " onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price +  "','" + product_image  + "');" + '"><img src="images/add-to-cart1.png"></a></span></center>';
+                            cadd += '</div>';
                         }else
                         {
 
@@ -2966,15 +2978,22 @@ myApp.onPageInit('search', function (page) {
                             cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Add</a></span></center>';
                             */
 
+                            cadd += '<div class="row">';
+
                             cadd += '<center>';
 
                             //cadd += '<span id="lblqty_' + product_id + '" style="display: none; background-color: #fff;line-height: 36px; vertical-align: top;"><a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="Pchange(' + "'" + product_id + "');" + '">Update</a></span>';
 
                             //cadd += '<span id="txtqty_' + product_id + '" style="display: none; background-color: #fff;line-height: 36px; vertical-align: top;">&nbsp;&nbsp;Qty <input maxlength="4" type="number" style="width:29px;padding-right: 20px !important; text-align: left;" value="' + qty +'" id="qty_' + product_id + '"></span>&nbsp;&nbsp;';
                             
+                            if(fact_sheet != '')
+                            {
+                                cadd += '<span"> <a href="#" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span>';
+                            }
                             cadd += '<span style="display: none; color: black;" id="pd_' + product_id +'"> <a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="RemoveProductNew(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span></center>' + "\n\n";
 
-                            cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  +  "','" + product_image + "');" + '">Add</a></span></center>';
+                            cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  +  "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span></center>';
+                            cadd += '</div>';
                         }
 
                         cadd += '           </div>' + "\n\n";
