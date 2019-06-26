@@ -19,7 +19,7 @@ var hostname = location.hostname;
 var srvURL = "http://www.ivii.in/api_ivii/Serv";
 if(hostname == 'localhost')
 {
-    var srvURL = "http://localhost/api_app_ivii/Serv";
+    var srvURL = "http://localhost/api_ivii/Serv";
 }
 var version = "100";
 var app_name ="IVII";
@@ -1646,6 +1646,7 @@ if(id)
                       bigproduct_image = urldecode(e.data.products[i].bigproduct_image);
                       product_name = urldecode(e.data.products[i].product_name);
                       product_price = urldecode(e.data.products[i].product_price);
+                      fact_sheet = urldecode(e.data.products[i].fact_sheet);
                       //brochure_fname = urldecode(e.data.products[i].brochure_fname);
 
                       //var b= i%2;
@@ -1696,84 +1697,33 @@ if(id)
                                   }
                               }
                               //myApp.alert('qty: ' + qty, '');
-                            /*
-                            cadd += '<center><span style="display: block; color: black;" id="pd_' + product_id +'">' + price + '<a href="#" onclick="RemoveProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '><img src="img/minus-64.png" style="width: 35px; height:35px;"></a>';
-                            cadd += '<span id="lblqty_' + product_id + '" style="width: 50px; display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;">Qty ' + qty + ' </span><input type="hidden" style="width:10px;" value="' + qty +'" id="qty_' + product_id + '">';
-                            cadd += '<a href="#" onclick="AddProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '><img src="img/plus-64.png" style="width: 35px; height:35px;"></a></span>';
                             
-                            cadd += '<span style="display: none; color: black;" id="pa_' + product_id +'">' + price + ' <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Add </a></span></center>';
-                            */
-                            //</span><span style="width: 50px; display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;">
-
-                            /*
-                            cadd += '<center>';
-
-                            cadd += '<span id="lblqty_' + product_id + '" style=" display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;"><a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="Pchange(' + "'" + product_id + "');" + '">Update</a></span>';
-
-                            cadd += '<span id="txtqty_' + product_id + '" style="display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;">&nbsp;&nbsp;Qty <input maxlength="4" type="number" style="width:29px; padding-right: 20px !important; text-align: left;" value="' + qty +'" id="qty_' + product_id + '"></span>&nbsp;&nbsp;';
-                            
-                            cadd += '<span style="display: inline-block; color: black;" id="pd_' + product_id +'"> <a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="RemoveProductNew(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span></center>' + "\n\n";
-
-                            cadd += '<center><span style="display: none; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Add</a></span></center>';
-                            */
-
                             //myApp.alert('test','')
                             cadd += '<center>';
 
-                            //cadd += '<span id="lblqty_' + product_id + '" style=" display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;"><a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="Pchange(' + "'" + product_id + "');" + '">Update</a></span>';
-
-                            //cadd += '<span id="txtqty_' + product_id + '" style="display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;">&nbsp;&nbsp;Qty <input maxlength="4" type="number" style="width:29px; padding-right: 20px !important; text-align: left;" value="' + qty +'" id="qty_' + product_id + '"></span>&nbsp;&nbsp;';
-                            
-                            //cadd += '<span style="display: inline-block; color: black;" id="pd_' + product_id +'"> <a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="RemoveProductNew(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span></center>' + "\n\n";
-
-                            //cadd += '<center><span style="display: none; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Add</a></span></center>';
-
+                           
+                            if(fact_sheet != '')
+                            {
+                                cadd += '<span> <a href="#" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span>';
+                            }
                            cadd += '<span style="display: block; color: black;" id="pd_' + product_id +'">' + price + ' <a href="#" class="link button button-small button-fill color-red" style="width: 100px;" onclick="RemoveProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span>';
-                           cadd += '<span style="display: none; color: black;" id="pa_' + product_id +'">' + price + ' <a href="#" class="link button button-small button-fill color-red" style="width: 100px;" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price + "','" + product_image + "');" + '">Add</a></span>';
+                           cadd += '<span style="display: none; color: black;" id="pa_' + product_id +'">' + price + ' <a href="#" class="link" style="" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price + "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span>';
                            cadd += '<center>';
 
                         }else
                         {
-                          //cadd += '<span style="display: none; color: black;" id="pd_' + product_id +'">' + price + ' <a href="#" class="link" onclick="RemoveProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove 2</a></span>';
-
-                          /*
-                            cadd += '<center><span style="display: none; color: black;" id="pd_' + product_id +'">' + price + '<a href="#" onclick="RemoveProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '><img src="img/minus-64.png" style="width: 35px; height:35px;"></a>';
-                            cadd += '<span id="lblqty_' + product_id + '" style="width: 50px; display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;">Qty 1 </span><input type="hidden" style="width:10px;" value="1" id="qty_' + product_id + '">';
-                            cadd += '<a href="#" onclick="AddProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '><img src="img/plus-64.png" style="width: 35px; height:35px;"></a></span>';
-                            
-                            cadd += '<span style="display: block; color: black;" id="pa_' + product_id +'">' + price + ' <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Add</a></span></center>';
-                            */
-
-                        /**/
-                        /*
-                            qty =1;
-                            cadd += '<center>';
-
-                            cadd += '<span id="lblqty_' + product_id + '" style="display: none; background-color: #fff;line-height: 36px; vertical-align: top;"><a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="Pchange(' + "'" + product_id + "');" + '">Update</a></span>';
-
-                            cadd += '<span id="txtqty_' + product_id + '" style="display: none; background-color: #fff;line-height: 36px; vertical-align: top;">&nbsp;&nbsp;Qty <input maxlength="4" type="number" style="width:29px;padding-right: 20px !important; text-align: left;" value="' + qty +'" id="qty_' + product_id + '"></span>&nbsp;&nbsp;';
-                            
-                            cadd += '<span style="display: none; color: black;" id="pd_' + product_id +'"> <a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="RemoveProductNew(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span></center>' + "\n\n";
-
-                            cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Add</a></span></center>';
-                            */
-
-                            //cadd += '<center><span style="display: none; color: black;" id="pd_' + product_id +'">' + price + '<a href="#" onclick="RemoveProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '><img src="img/minus-64.png" style="width: 35px; height:35px;"></a>';
-                            //cadd += '<span id="lblqty_' + product_id + '" style="width: 50px; display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;">Qty 1 </span><input type="hidden" style="width:10px;" value="1" id="qty_' + product_id + '">';
-                            //cadd += '<a href="#" onclick="AddProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '><img src="img/plus-64.png" style="width: 35px; height:35px;"></a></span>';
-                            
-                            //cadd += '<span style="display: block; color: black;" id="pa_' + product_id +'">' + price + ' <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Add</a></span></center>';
-
+                          
+                            if(fact_sheet != '')
+                            {
+                                cadd += '<center><span> <a href="#" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span></center>';
+                            }                          
                             //cadd += '<center>';
                             cadd += '<center><span style="display: none; color: black;" id="pd_' + product_id +'">' + price + '<a href="#" class="link button button-small button-fill color-red" onclick="RemoveProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '>Remove</a></span></center>';
-                            cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price +  "','" + product_image + "');" + '">Add</a></span></center>';
+                            cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="" href="#" class="link" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price +  "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span></center>';
                            //cadd += '<center>';
                         }
 
-                        //cadd += '<br /><a href="#" onclick="RemoveProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '><img src="img/minus-64.png" style="width: 35px; height:35px;"></a>';
-                        //cadd += '<span id="lblqty_' + product_id + '" style="width: 50px; display: inline-block; background-color: #fff;line-height: 36px; vertical-align: top;">Qty 1 </span><input type="hidden" style="width:10px;" value="0" id="qty_' + product_id + '">';
-                        //cadd += '<a href="#" onclick="AddProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '><img src="img/plus-64.png" style="width: 35px; height:35px;"></a>';
-
+                        
 
                       //}
                       //cadd += '               </a>';
