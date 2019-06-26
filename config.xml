@@ -68,9 +68,9 @@
     <plugin name="cordova-plugin-vibration" spec="2.1.6" source="npm" />
     <plugin name="cordova.plugins.diagnostic" source="npm" spec="~3.7.1" />
 
-    <plugin name="phonegap-plugin-push" spec="2.1.0" />
 
     <!--
+    <plugin name="phonegap-plugin-push" spec="2.1.0" />
     <platform name="android">
           <resource-file src="google-services.json" target="google-services.json" />
     </platform>
