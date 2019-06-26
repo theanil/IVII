@@ -1649,8 +1649,8 @@ if(id)
                       fact_sheet = urldecode(e.data.products[i].fact_sheet);
                       //brochure_fname = urldecode(e.data.products[i].brochure_fname);
 
-                      //var b= i%2;
-                      var b= i%1;
+                      var b= i%2;
+                      //var b= i%1;
                       //alert(b)
                       if(b == 0)
                       {
@@ -1665,7 +1665,7 @@ if(id)
                         price = '';
                       }
 
-                      cadd += '           <div class="col-100" style="background: transparent;">';
+                      cadd += '           <div class="col-50" style="background: transparent;">';
                       cadd += '               <a href="#" onclick="ProductDetails(' + "'" + product_id +"','" + bigproduct_image +  "');" + '">';
                       cadd += '                   <img src="' + product_image + '" style="width: 100%;"/></a>';
                       cadd += '                  <div><center><a style="color: black; font-size: 22px;" href="#" onclick="ProductDetails(' + "'" + product_id +"','" + bigproduct_image +  "');" + '">' + product_name + '</a>';
@@ -1699,7 +1699,7 @@ if(id)
                               //myApp.alert('qty: ' + qty, '');
                             
                             //myApp.alert('test','')
-                            cadd += '<div class="row">';
+                            //cadd += '<div class="row">';
                             cadd += '<center>';
 
                            
@@ -1712,12 +1712,12 @@ if(id)
                            
                            cadd += '<span style="display: none; color: black;" id="pa_' + product_id +'">' + price + ' <a href="#" class="link" style="" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price + "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span>';
                            cadd += '<center>';
-                           cadd += '</div>';
+                           //cadd += '</div>';
                         }else
                         {
                             //cadd += '               <a href="#" onclick="downbrochure(' + "'" + urldecode(e.data.brochure[i].brochure_pdf) + "');" + '">';
 
-                            cadd += '<div class="row">';
+                            //cadd += '<div class="row">';
                             if(fact_sheet != '')
                             {
                                 cadd += '<center><span> <a href="#" data-rel="external" onclick="downbrochure(' + "'" + fact_sheet + "'" +');" class="link" style=""' + '"><img src="images/tech-sheet1.png"></a></span></center>';
@@ -1726,7 +1726,7 @@ if(id)
                             cadd += '<center><span style="display: none; color: black;" id="pd_' + product_id +'">' + price + '<a href="#" class="link button button-small button-fill color-red" onclick="RemoveProduct2(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "')" + '";' + '>Remove</a></span></center>';
                             cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="" href="#" class="link" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price +  "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span></center>';
                            //cadd += '<center>';
-                           cadd += '</div>';
+                           //cadd += '</div>';
                         }
 
                         
@@ -1736,11 +1736,15 @@ if(id)
                       //cadd += '               <a class="external" href="' + urldecode(e.data.brochure[i].brochure_pdf)  + '"' + '>' + brochure_fname + '</a>';
                       cadd += '           </div>' + "\n\n";
                       
-                      if(b == 0)
+                      if(b == 1)
                       {
                         cadd += '      </div>' + "\n\n";
                       }
                     }
+                    if(b == 0)
+                      {
+                        cadd += '      </div>' + "\n\n";
+                      }
                     console.log(cadd)
 
                     //console.log(localStorage.getItem("local_products"));
@@ -2892,7 +2896,7 @@ myApp.onPageInit('search', function (page) {
                           fact_sheet = urldecode(e.data.products[i].fact_sheet);
                           //brochure_fname = urldecode(e.data.products[i].brochure_fname);
                          
-                          var b= i%1;
+                          var b= i%2;
                           //alert(b)
                           if(b == 0)
                           {
@@ -2907,7 +2911,7 @@ myApp.onPageInit('search', function (page) {
                             price = '';
                           }
 
-                          cadd += '           <div class="col-100" style="background: transparent;">';
+                          cadd += '           <div class="col-50" style="background: transparent;">';
                           cadd += '               <a href="#" onclick="ProductDetails(' + "'" + product_id +"','" + bigproduct_image +  "');" + '">';
                           cadd += '                   <img src="' + product_image + '" style="width: 100%;"/></a>';
                           cadd += '                  <div><center><a style="color: black; font-size: 22px;" href="#" onclick="ProductDetails(' + "'" + product_id +"','" + bigproduct_image +  "');" + '">' + product_name + '</a>';
@@ -2978,7 +2982,7 @@ myApp.onPageInit('search', function (page) {
                             cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link button button-small button-fill color-red" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Add</a></span></center>';
                             */
 
-                            cadd += '<div class="row">';
+                            //cadd += '<div class="row">';
 
                             cadd += '<center>';
 
@@ -2993,16 +2997,20 @@ myApp.onPageInit('search', function (page) {
                             cadd += '<span style="display: none; color: black;" id="pd_' + product_id +'"> <a style="width:80px;" href="#" class="link button button-small button-fill color-red" onclick="RemoveProductNew(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  + "');" + '">Remove</a></span></center>' + "\n\n";
 
                             cadd += '<center><span style="display: block; color: black;" id="pa_' + product_id +'"> <a style="width:100px;" href="#" class="link" onclick="AddProduct(' + "'" + product_id +  "','" + product_name  +  "','" + product_price  +  "','" + product_image + "');" + '"><img src="images/add-to-cart1.png"></a></span></center>';
-                            cadd += '</div>';
+                            //cadd += '</div>';
                         }
 
                         cadd += '           </div>' + "\n\n";
                       
-                          if(b == 0)
+                          if(b == 1)
                           {
                             cadd += '      </div>' + "\n\n";
                           }
                        }
+                      if(b == 0)
+                      {
+                        cadd += '      </div>' + "\n\n";
+                      }
                         console.log(cadd)
 
                         //console.log(localStorage.getItem("local_products"));
