@@ -150,6 +150,9 @@
     <preference name="phonegap-version" value="cli-7.1.0" />
 -->
 
+    <preference name="phonegap-version" value="cli-7.1.0" />
+
+
     <platform name="ios">
 
         <!-- iOS 8.0+ -->
