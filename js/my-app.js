@@ -2345,8 +2345,8 @@ myApp.onPageInit('brochure', function (page) {
 function downbrochure(URL)
 {
       alert(URL)
-      downloader.init({folder: "ivii", unzip: true});
-      downloader.get(URL);
+      //downloader.init({folder: "ivii", unzip: true});
+      //downloader.get(URL);
       window.open( URL, '_blank');
 }
 
