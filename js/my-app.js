@@ -2344,10 +2344,9 @@ myApp.onPageInit('brochure', function (page) {
 
 function downbrochure(URL) 
 {
-    alert(URL)
+    //alert(URL)
     window.open(URL, '_system');
     //myApp.hidePreloader();
-
 }
 
 
