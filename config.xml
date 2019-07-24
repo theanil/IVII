@@ -2,7 +2,7 @@
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 
-<widget id="in.ivii.app" version="1.0.2" versionCode="102" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="in.ivii.app" version="1.0.3" versionCode="103" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
 
     <name>IVII</name>
     <description>IVII</description>
@@ -187,7 +187,7 @@
           <icon src="icon/ios/icon-50@2x.png" width="100" height="100" />
         -->
 
-        <icon src="icon/ios/Icon-Store.png"   width="1024" height="1024" />
+        <icon src="icon/ios/1024x1024.png"   width="1024" height="1024" />
 
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
