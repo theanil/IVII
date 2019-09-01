@@ -68,6 +68,7 @@
     <plugin name="cordova-plugin-vibration" spec="2.1.6" source="npm" />
     <plugin name="cordova.plugins.diagnostic" source="npm" spec="~3.7.1" />
    
+    <plugin name="com.google.playservices" source="npm" />
     <plugin name="aerogear-cordova-oauth2" source="npm" />
 
 

@@ -56,15 +56,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
         scopes: 'https://www.googleapis.com/auth/drive'
       }
     });
- 
-    oauth2.addKeycloak({
-      name: 'keycloak',
-      settings: {
-        base: 'http://192.168.1.15:8080/auth',
-        clientId: 'shoot-third-party',
-        realm: "shoot-realm"
-      }
-    });
+
+    /*
  
     oauth2.addFacebook({
       name: 'facebook',
@@ -74,7 +67,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
         scopes: 'photo_upload, publish_actions'
       }
     });
- 
+    */
+    
     oauth2.gplus.requestAccess()
       .then(function (token) {
         console.log(token);
