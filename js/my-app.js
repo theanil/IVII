@@ -49,7 +49,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
     localStorage.setItem("device_browser", navigator.userAgent);
 
 
-    app.receivedEvent('deviceready');
     oauth2.addGoogle({
       name: 'gplus',
       settings: {
@@ -85,6 +84,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
         alert(err.error);
       });
 
+      myApp.alert('device.2 ' + device.uuid, '');
     document.addEventListener("backbutton", function(e)
     {
         //page = $.mobile.activePage[0].id;
