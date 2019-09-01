@@ -42,11 +42,48 @@ document.addEventListener("deviceready", onDeviceReady, false);
  
  function onDeviceReady() 
  {
-    //myApp.alert('device.uuid ' + device.uuid, '');
+    myApp.alert('device.uuid ' + device.uuid, '');
 
     localStorage.setItem("device_platform", device.platform);
     localStorage.setItem("device_uuid", device.uuid);
     localStorage.setItem("device_browser", navigator.userAgent);
+
+
+    app.receivedEvent('deviceready');
+    oauth2.addGoogle({
+      name: 'gplus',
+      settings: {
+        clientId: "617285928032-nnkcrot1827fmd738pug6clbqlgosffs.apps.googleusercontent.com",
+        scopes: 'https://www.googleapis.com/auth/drive'
+      }
+    });
+ 
+    oauth2.addKeycloak({
+      name: 'keycloak',
+      settings: {
+        base: 'http://192.168.1.15:8080/auth',
+        clientId: 'shoot-third-party',
+        realm: "shoot-realm"
+      }
+    });
+ 
+    oauth2.addFacebook({
+      name: 'facebook',
+      settings: {
+        clientId: '1511044619160050',
+        clientSecret: '3b08052d3d96e2120f2c53a36eebd02f',
+        scopes: 'photo_upload, publish_actions'
+      }
+    });
+ 
+    oauth2.gplus.requestAccess()
+      .then(function (token) {
+        console.log(token);
+        // add token to the http header on futher http requests:
+        // 'Authorization': 'Bearer ' + token
+      }, function (err) {
+        alert(err.error);
+      });
 
     document.addEventListener("backbutton", function(e)
     {
